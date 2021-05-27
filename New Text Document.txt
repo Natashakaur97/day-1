@@ -17,3 +17,306 @@ public class Program
 		
 	}
 }
+
+
+
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int a;
+		Console.WriteLine("enter a number");
+		a=Convert.ToInt32(Console.ReadLine());
+		if(a>=18)
+		{
+		Console.WriteLine("eligible");
+			
+		}
+		else{
+				Console.WriteLine("not eligible");
+		}
+	}
+}
+
+
+
+
+
+
+
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int a;
+		Console.WriteLine("enter a number");
+		a=Convert.ToInt32(Console.ReadLine());
+		if(a>=18)
+		{
+		
+			if(a<=60)
+			{
+				Console.WriteLine("senior citizen");
+			}
+				Console.WriteLine("eligible");
+			
+		}
+		else{
+				Console.WriteLine("noteligible");
+		}
+		
+	}
+}
+
+
+
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int a;
+		int b;
+		int c;
+		Console.WriteLine("enter 1st number");
+		Console.WriteLine("enter 2nd  number");
+		Console.WriteLine("enter 3rd  number");
+		a=Convert.ToInt32(Console.ReadLine());
+				b=Convert.ToInt32(Console.ReadLine());
+				c=Convert.ToInt32(Console.ReadLine());
+		if(a> b && a > c)
+		{
+			Console.WriteLine("large"+a);
+			
+		}
+
+		if(b>a && b>c){
+			Console.WriteLine("large"+b);
+			
+		}
+
+		if(c>a && c>b){
+			Console.WriteLine(" large"+c);
+			
+		}
+		
+		
+	}
+}
+
+
+
+
+
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int a;
+		Console.WriteLine("enter a number");
+		a=Convert.ToInt32(Console.ReadLine());
+		if(a==1){
+				Console.WriteLine("one");
+		}
+		else if(a==2){
+				Console.WriteLine("two");
+		}
+				else if(a==3){
+				Console.WriteLine("three");
+		}
+		else if(a==4){
+				Console.WriteLine("four");
+		}
+		
+	}
+}
+
+
+
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int Number;
+		Console.WriteLine("enter a number");
+		Number=Convert.ToInt32(Console.ReadLine());
+		switch(Number)
+		{
+			case 1:Console.WriteLine("one");
+				break;
+			case 2:Console.WriteLine("two");
+				break;
+			 case 3:Console.WriteLine("three");
+				break;
+			default :Console.WriteLine("default");
+				break;
+				
+		
+		
+		}
+	}
+}
+
+
+
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		
+		for(int i=0;i<5 ; i++){
+			for(int j=0; j<5 ; j++){
+				if(i>j){
+			Console.Write(" * ");
+				}
+			
+				
+			}
+		  Console.WriteLine("\n");
+		}
+		
+		
+	}
+}
+
+
+
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+	int n=10;
+		for(int i=0;i<n ; i++){
+			for(int j=0; j<n ; j++){
+				if(  i+j>= n-1 && i<=j){
+			Console.Write(" * ");
+				}
+			
+				
+			}
+		  Console.WriteLine();
+		}
+		
+		
+	}
+}
+
+
+
+for (int i = 0; i < 5; i++)
+{
+for (int j = 0; j <i; j++)
+{
+Console.Write(" ");
+}
+for (int k = 1; k <= 5 - i; k++)
+{
+Console.Write("*");
+}
+Console.WriteLine();
+}
+for (int i = 1; i < 5; i++)
+{
+for (int j = 1; j < 5-i; j++)
+{
+Console.Write(" ");
+}
+for (int k = 1; k <= i+1; k++)
+{
+Console.Write("*");
+}
+Console.WriteLine();
+
+
+
+
+using System;
+                   
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        int[] a=new int[10];
+        for(int i=0;i<a.Length;i++)
+        {
+           Console.WriteLine("enter value: " );
+           a[i]=Convert.ToInt32(Console.ReadLine());
+        }
+        foreach(var item in a)
+        {
+            if(item%2==0)
+            {
+                Console.WriteLine("Even:" +(item));
+            }
+            else
+            {
+                Console.WriteLine("odd:" +(item));
+               
+            }
+        }
+    }
+}
+ }
+
+
+
+int[] arr1 = new int[3];
+int[] Counter = new int[3];
+
+ int counter;
+
+Console.WriteLine("Input elements");
+for (int i = 0; i < arr1.Length; i++)
+{
+arr1[i] = Convert.ToInt32(Console.ReadLine());
+Counter[i] = -1;
+}
+
+
+
+ for (int i = 0; i < arr1.Length; i++)
+{
+counter = 1;
+for (int j = i+1; j < arr1.Length; j++)
+{
+if(arr1[i]== arr1[j])
+{
+counter++;
+Counter[j] = 0;
+}
+}
+if (Counter[i] != 0)
+{
+Counter[i] = counter;
+}
+}
+
+
+ for (int i = 0; i < arr1.Length; i++)
+{
+if(Counter[i]!=0)
+{
+Console.WriteLine("{0} occurs {1}",arr1[i],Counter[i]);
+}
+}
+Console.ReadLine();
